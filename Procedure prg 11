@@ -9,3 +9,18 @@ SQL> create or replace procedure welcome_msg as
 
 SQL> exec welcome_msg;
 _welcome to pl/sql procedures!_
+
+
+
+SET SERVEROUTPUT ON;
+DECLARE
+  a NUMBER:=10;
+  b NUMBER:=5;
+BEGIN
+  IF a<b THEN
+    DBMS_OUTPUT.PUT_LINE('Min='||a);
+  ELSE
+    DBMS_OUTPUT.PUT_LINE('Min='||b);
+  END IF;
+END;
+/
