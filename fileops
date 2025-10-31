@@ -1,0 +1,27 @@
+Dim s As String
+
+Private Sub Drive1_Change()
+    Dir1.Path = Drive1.Drive
+End Sub
+
+Private Sub exit_Click()
+    End
+End Sub
+
+Private Sub File1_Click()
+    s = File1.Path & "\" & File1.FileName
+    Text1.Text = s
+End Sub
+Private Sub Dir1_Change()
+    File1.Path = Dir1.Path
+End Sub
+
+Private Sub load_Click()
+    On Error Resume Next
+    RichTextBox1.LoadFile s
+End Sub
+
+Private Sub save_Click()
+    On Error Resume Next
+    RichTextBox1.SaveFile s
+End Sub
